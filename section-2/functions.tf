@@ -17,6 +17,16 @@ variable "tags" {
   default = ["firstec2", "secondec2"]
 }
 
+data "aws_ami" "app_ami" {
+    most_recent = true
+    owners = ["amazon"]
+
+    filter {
+        name = "name"
+        values = ["amzn2-ami-hvm*"]
+    }
+}
+
 variable "ami" {
   type = map
   default = {
@@ -32,7 +42,8 @@ resource "aws_key_pair" "loginkey" {
 }
 
 resource "aws_instance" "app-dev" {
-  ami           = lookup(var.ami, var.region)
+#   ami           = lookup(var.ami, var.region)
+  ami = data.aws_ami.app_ami.id
   instance_type = "t2.micro"
   key_name      = aws_key_pair.loginkey.key_name
   count         = 2
