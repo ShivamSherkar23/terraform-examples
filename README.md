@@ -3,3 +3,4 @@
 - other manual changes will not show up after refreshing using ```terraform refresh```
 - third party provider cannot be added using ```terraform init``` directly 
 - we have to place the provider file into the specific dir, ```%APPDATA%\terraform.d\plugins``` in windows and ```~/.terraform.d/plugins``` in linux
+- Methods to add variables are environment variables, terraform,tfvars file, custom var file and mention that during apply, cli command with -var directly.
