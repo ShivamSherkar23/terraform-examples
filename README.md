@@ -4,3 +4,8 @@
 - third party provider cannot be added using ```terraform init``` directly 
 - we have to place the provider file into the specific dir, ```%APPDATA%\terraform.d\plugins``` in windows and ```~/.terraform.d/plugins``` in linux
 - Methods to add variables are environment variables, terraform,tfvars file, custom var file and mention that during apply, cli command with -var directly.
+- to get the logs while terraform plan command use the below commands to set the env variable
+```
+export TF_LOG_PATH=/tmp/crash.log
+export TF_LOG=TRACE
+```
