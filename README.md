@@ -17,3 +17,4 @@ terraform graph > graph.dot
 yum install graphviz
 cat graph.dot | dot -Tsvg > graph.svg
 ```
+- to save plan to file use ```terraform plan -out filename```
