@@ -11,3 +11,9 @@ export TF_LOG=TRACE
 ```
 - ```terraform taint resource_type.resource_name```
   this command marks the resource as tainted, so that same resource will be recreated on the next terraform plan or apply
+- To see the graph of the resources which we create use the below commands
+```
+terraform graph > graph.dot
+yum install graphviz
+cat graph.dot | dot -Tsvg > graph.svg
+```
