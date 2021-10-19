@@ -9,3 +9,5 @@
 export TF_LOG_PATH=/tmp/crash.log
 export TF_LOG=TRACE
 ```
+- ```terraform taint resource_type.resource_name```
+  this command marks the resource as tainted, so that same resource will be recreated on the next terraform plan or apply
