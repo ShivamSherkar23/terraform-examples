@@ -1,5 +1,7 @@
 #provisioners are used to execute scripts on local or remote  machine as part of resource creation
 
+#we can use the local-exec instead of remote to execute the script on the local machine i.e where the terraform apply command is executing
+
 resource "aws_instance" "myec2" {
   ami                    = "ami-02e136e904f3da870"
   instance_type          = "t2.micro"
