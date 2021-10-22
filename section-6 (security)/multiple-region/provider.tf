@@ -1,3 +1,5 @@
+#for multiple aws account use the profile parameter for the specific aws account
+
 provider "aws" {
   region     =  "us-east-1"
   shared_credentials_file = "C:\\Users\\Shivam Sherkar\\.aws\\credentials"
