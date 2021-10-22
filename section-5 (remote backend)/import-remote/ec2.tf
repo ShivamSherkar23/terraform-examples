@@ -9,3 +9,6 @@ resource "aws_instance" "myec2" {
     Name = "manual"
   }
 }
+
+#after writing this config manully for the instance which need to import use the command
+# terraform import aws_instance.myec2 existing_instance_id
